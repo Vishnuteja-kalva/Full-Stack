@@ -41,7 +41,9 @@ const cors = require("cors");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://frontend-vishnuteja.onrender.com'
+}));
 
 mongoose.connect('mongodb://127.0.0.1:27017/Full');
 const UserModel = require("./models/User");
