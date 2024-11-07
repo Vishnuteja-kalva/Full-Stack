@@ -11,7 +11,7 @@ export const SignupForm = () => {
   const [password, setPassword] = useState('');
   const Save = (e) => {
     e.preventDefault();
-    axios.post('https://food-info-vishnuteja.onrender.com',{username,email,password})
+    axios.post('https://food-info-vishnuteja.onrender.com/signup',{username,email,password})
     .then((result)=>{
       console.log(result)
       window.alert("Successfully registered")
