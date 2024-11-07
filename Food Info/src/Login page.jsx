@@ -108,7 +108,7 @@ export let Login = () => {
         if (username === '' || password === '') {
             alert('Please fill in all the required fields.');
         } else {
-            axios.post('http://localhost:3000/login', { username, password })
+            axios.post('https://food-info-vishnuteja.onrender.com', { username, password })
                 .then(result => {
                     const { message } = result.data;
                     if (message === "Success") {
