@@ -42,7 +42,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://frontend-vishnuteja.onrender.com'
+  origin: 'https://frontend-vishnuteja.onrender.com', // Add your frontend origin here
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add the HTTP methods you need
+  credentials: true // Enable if you need cookies/auth
 }));
 
 mongoose.connect('mongodb://127.0.0.1:27017/Full');
