@@ -57,7 +57,7 @@ export const FoodChatbot = () => {
 
         try {
             const response = await axios.post(
-                'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key==${process.env.GENIE_API_KEY}', // Ensure this key is valid
+                'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key==${process.env.REACT_APP_GENIE_API_KEY}', // Ensure this key is valid
                 {
                     contents: [
                         {
