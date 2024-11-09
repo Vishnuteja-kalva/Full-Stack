@@ -47,7 +47,7 @@ app.use(cors({
   credentials: true // Enable if you need cookies/auth
 }));
 
-mongoose.connect(process.env.MONGO_URI ||'mongodb://127.0.0.1:27017/Full',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI ||'mongodb://127.0.0.1:27017/Full');
 const UserModel = require("./models/User");
 
 app.post('/login', (req, res) => {
